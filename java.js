@@ -1,6 +1,6 @@
-const playerSelection = "scissors";
+const playerSelection = "";
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playGame());
 
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
@@ -14,7 +14,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let player = playerSelection.toLowerCase();
+    let player = prompt("Rock, Paper, Scissors?").toLowerCase();
     let computer = computerSelection.toLowerCase();
     if (player == computer) {
         return "You draw!";
@@ -31,9 +31,13 @@ function playRound(playerSelection, computerSelection) {
     } else if (player == "rock" && computer == "paper") {
         return "You lose! Paper beats Rock"
     } else {
-        return "Make sure you enter either Rock, Paper or Scissors"
+        return "Make sure you type either Rock, Paper or Scissors!"
     }
-
 }
 
+function playGame() {
+    for (let x = 0; x < 5; x++) {
+        console.log(playRound(playerSelection, getComputerChoice()));
+    }
+}
 
