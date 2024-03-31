@@ -5,6 +5,24 @@ const compScore = document.getElementById("compScore")
 let myscore = 0;
 let pcscore = 0;
 const round = document.getElementById("round");
+const myZone = document.getElementById("myZone")
+const pcZone = document.getElementById("pcZone")
+
+function addPaper(destination) {
+    const img = document.getElementById(destination);
+    destination.src = "/pics/paper.png";
+}
+
+function addRock(destination) {
+    const img = document.getElementById(destination);
+    destination.src = "/pics/rock.png";
+}
+
+function addScissors(destination) {
+    const img = document.getElementById(destination);
+    destination.src = "/pics/scissors.png";
+}
+
 
 console.log(playGame());
 
@@ -24,28 +42,51 @@ function playRound(playerSelection, computerSelection) {
     let player = playerSelection;
     let computer = computerSelection.toLowerCase();
     if (player == computer) {
+        if (playerSelection == "rock") {
+            addRock(myImage);
+            addRock(pcImage);
+        } if (playerSelection == "paper") {
+            addPaper(myImage);
+            addPaper(pcImage);
+        } if (playerSelection == "scissors") {
+            addScissors(myImage);
+            addScissors(pcImage);
+        };
         round.textContent = "DRAW";
     } else if (player == "scissors" && computer == "paper") {
-        round.textContent = "YOU: SCISSORS PC: PAPER";
-        return ++myscore
+        addScissors(myImage);
+        addPaper(pcImage);
+        round.textContent = "ROUND WON";
+        return ++myscore;
     } else if (player == "paper" && computer == "rock") {
-        round.textContent = "YOU: PAPER PC: ROCK";
-        return ++myscore
+        addPaper(myImage);
+        addRock(pcImage);
+        round.textContent = "ROUND WON";
+        return ++myscore;
     } else if (player == "rock" && computer == "scissors") {
-        round.textContent = "YOU: ROCK PC: SCISSORS";
+        addRock(myImage);
+        addScissors(pcImage);
+        round.textContent = "ROUND WON";
         return ++myscore
     } else if (player == "scissors" && computer == "rock") {
-        round.textContent = "YOU: SCISSORS PC: ROCK";
+        addScissors(myImage);
+        addRock(pcImage);
+        round.textContent = "ROUND LOST";
         return ++pcscore
     } else if (player == "paper" && computer == "scissors") {
-        round.textContent = "YOU: PAPER PC: SCISSORS";
+        addPaper(myImage);
+        addScissors(pcImage);
+        round.textContent = "ROUND LOST";
         return ++pcscore
     } else if (player == "rock" && computer == "paper") {
-        round.textContent = "YOU: ROCK PC: PAPER";
+        addRock(myImage);
+        addPaper(pcImage);
+        round.textContent = "ROUND LOST";
         return ++pcscore
     } else {
         return "Make sure you type either Rock, Paper or Scissors!"
     }
+
 };
 
 

@@ -48,17 +48,22 @@ h3 {
   border: solid #331717;
 }
 
-.playZone {
+#pcZone {
+  border: solid red 30px;
+  border-radius: 50%;
   height: 300px;
   width: 300px;
 }
 
-#compBox .playZone {
-  border: solid red 30px;
-  border-radius: 50%;
-}
-
-#playerBox .playZone {
+#myZone {
   border: solid blue 30px;
   border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+img {
+  height: 220px;
+  width: 220px;
+  padding: 30px;
 }
