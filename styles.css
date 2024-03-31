@@ -1,9 +1,24 @@
-#gameBox {
+#playerBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  gap: 30px;
+}
+
+#compBox {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   flex: 1;
+  gap: 30px;
+}
+
+#gameBox {
+  display: flex;
+  gap: 100px;
 }
 
 body {
@@ -12,10 +27,38 @@ body {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  height: 90vh;
+  min-height: 95vh;
 }
 
 h2,
 h3 {
   text-align: center;
+}
+
+#buttons {
+  flex-flow: row;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bolder;
+}
+
+.scoreboard {
+  height: 75px;
+  width: 300px;
+  border: solid #331717;
+}
+
+.playZone {
+  height: 300px;
+  width: 300px;
+}
+
+#compBox .playZone {
+  border: solid red 30px;
+  border-radius: 50%;
+}
+
+#playerBox .playZone {
+  border: solid blue 30px;
+  border-radius: 50%;
 }

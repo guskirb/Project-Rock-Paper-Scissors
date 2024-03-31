@@ -1,6 +1,7 @@
 const playerSelection = "";
 const computerSelection = getComputerChoice();
-const scoreboard = document.getElementById("score")
+const scoreboard = document.getElementById("score");
+const compScore = document.getElementById("compScore")
 let myscore = 0;
 let pcscore = 0;
 const round = document.getElementById("round");
@@ -51,7 +52,8 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame(playerSelection) {
     console.log(playRound(playerSelection, getComputerChoice()));
-    scoreboard.innerText = "YOU: " + myscore + " PC: " + pcscore;
+    scoreboard.innerText = myscore;
+    compScore.innerText = pcscore;
     if (myscore >= 5) {
         scoreboard.innerText = "YOU WIN";
         myscore = 0;
