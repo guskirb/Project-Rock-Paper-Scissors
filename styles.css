@@ -1,0 +1,21 @@
+#gameBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 90vh;
+}
+
+h2,
+h3 {
+  text-align: center;
+}

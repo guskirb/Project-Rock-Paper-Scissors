@@ -3,7 +3,7 @@ const computerSelection = getComputerChoice();
 const scoreboard = document.getElementById("score")
 let myscore = 0;
 let pcscore = 0;
-const log = document.getElementById("gameLog");
+const round = document.getElementById("round");
 
 console.log(playGame());
 
@@ -23,24 +23,24 @@ function playRound(playerSelection, computerSelection) {
     let player = playerSelection;
     let computer = computerSelection.toLowerCase();
     if (player == computer) {
-        log.textContent = "DRAW";
+        round.textContent = "DRAW";
     } else if (player == "scissors" && computer == "paper") {
-        log.textContent = "YOU: SCISSORS PC: PAPER";
+        round.textContent = "YOU: SCISSORS PC: PAPER";
         return ++myscore
     } else if (player == "paper" && computer == "rock") {
-        log.textContent = "YOU: PAPER PC: ROCK";
+        round.textContent = "YOU: PAPER PC: ROCK";
         return ++myscore
     } else if (player == "rock" && computer == "scissors") {
-        log.textContent = "YOU: ROCK PC: SCISSORS";
+        round.textContent = "YOU: ROCK PC: SCISSORS";
         return ++myscore
     } else if (player == "scissors" && computer == "rock") {
-        log.textContent = "YOU: SCISSORS PC: ROCK";
+        round.textContent = "YOU: SCISSORS PC: ROCK";
         return ++pcscore
     } else if (player == "paper" && computer == "scissors") {
-        log.textContent = "YOU: PAPER PC: SCISSORS";
+        round.textContent = "YOU: PAPER PC: SCISSORS";
         return ++pcscore
     } else if (player == "rock" && computer == "paper") {
-        log.textContent = "YOU: ROCK PC: PAPER";
+        round.textContent = "YOU: ROCK PC: PAPER";
         return ++pcscore
     } else {
         return "Make sure you type either Rock, Paper or Scissors!"
