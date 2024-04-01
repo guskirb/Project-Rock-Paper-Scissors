@@ -96,11 +96,11 @@ function playGame(playerSelection) {
     scoreboard.innerText = myscore;
     compScore.innerText = pcscore;
     if (myscore >= 5) {
-        scoreboard.innerText = "YOU WIN";
+        round.innerText = "YOU WIN";
         myscore = 0;
         pcscore = 0;
     } if (pcscore >= 5) {
-        scoreboard.innerText = "YOU LOSE";
+        round.innerText = "YOU LOSE";
         myscore = 0;
         pcscore = 0;
     }

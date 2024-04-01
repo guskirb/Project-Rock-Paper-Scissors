@@ -1,3 +1,9 @@
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #playerBox {
   display: flex;
   flex-flow: column;
@@ -19,6 +25,7 @@
 #gameBox {
   display: flex;
   gap: 100px;
+  padding-top: 150px;
 }
 
 body {
@@ -27,7 +34,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  min-height: 95vh;
+  min-height: 98vh;
+  font-family: "Madimi One", sans-serif;
 }
 
 h2,
@@ -36,34 +44,83 @@ h3 {
 }
 
 #buttons {
+  display: flex;
   flex-flow: row;
-  border-radius: 10px;
-  padding: 5px;
+  padding: 0px;
   font-weight: bolder;
+  justify-content: center;
+  align-items: center;
 }
 
-.scoreboard {
+#myScoreboard {
+  background-color: blue;
+  border-radius: 50%;
   height: 75px;
-  width: 300px;
-  border: solid #331717;
+  width: 75px;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-right: 50px;
+  box-shadow: #0000ff65 -5px 5px, #0000ff46 -10px 10px, #0000ff3b -15px 15px,
+    #0000ff25 -20px 20px, #0000ff0d -25px 25px;
+}
+
+#pcScoreboard {
+  background-color: red;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-left: 50px;
+  box-shadow: #ff000065 5px 5px, #ff000046 10px 10px, #ff00003b 15px 15px,
+    #ff000025 20px 20px, #f02eaa0d 25px 25px;
 }
 
 #pcZone {
-  border: solid red 30px;
+  border: solid #ff0000 30px;
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  box-shadow: #ff000065 5px 5px, #ff000046 10px 10px, #ff00003b 15px 15px,
+    #ff000025 20px 20px, #f02eaa0d 25px 25px;
 }
 
 #myZone {
-  border: solid blue 30px;
+  border: solid #0000ff 30px;
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  box-shadow: #0000ff65 -5px 5px, #0000ff46 -10px 10px, #0000ff3b -15px 15px,
+    #0000ff25 -20px 20px, #0000ff0d -25px 25px;
 }
 
-img {
+#gameBox img {
   height: 220px;
   width: 220px;
   padding: 30px;
+}
+
+#rockButton,
+#paperButton,
+#scissorsButton {
+  height: 100px;
+  width: 100px;
+}
+
+.lower {
+  display: flex;
+}
+
+.footer img {
+  height: 50px;
+  width: 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: auto;
+  margin-right: auto;
 }

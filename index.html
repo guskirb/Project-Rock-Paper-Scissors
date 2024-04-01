@@ -4,43 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Rock, Paper, Scissors!</title>
     <link rel="stylesheet" href="styles.css">
     <script src="java.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Madimi+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>ROCK, PAPER, SCISSORS!</h1>
     <div id="scoreboard">
 
-        <h3 id="round">Press a button to start playing!</h3>
+
     </div>
-    <div class="buttons">
-        <button id="rockButton">ROCK</button>
-        <button id="paperButton">PAPER</button>
-        <button id="scissorsButton">SCISSORS</button>
-    </div>
+
     <div id="gameBox">
         <div id="playerBox">
             <div id="myZone">
-                <img id="myImage" src="">
+                <img id="myImage" src="/pics/blank.png">
             </div>
-            <div class="scoreboard">
-                <h2 id="score"></h2>
 
-            </div>
 
         </div>
 
         <div id="compBox">
             <div id="pcZone">
-                <img id="pcImage" src="">
+                <img id="pcImage" src="/pics/blank.png">
             </div>
-            <div class="scoreboard">
+
+        </div>
+    </div>
+    <h2 id="round">Press a button to start playing!</h3>
+        <div class="lower">
+            <div id="myScoreboard">
+                <h2 id="score"></h2>
+            </div>
+            <div class="buttons">
+
+                <img src="/pics/rock.png" id="rockButton" alt="rock hand lineart"></button>
+                <img src="/pics/paper.png" id="paperButton" alt="paper hand lineart"></button>
+                <img src="/pics/scissors.png" id="scissorsButton" alt="scissors hand lineart"></button>
+
+            </div>
+            <div id="pcScoreboard">
                 <h2 id="compScore"></h2>
             </div>
         </div>
-    </div>
+        <div class="footer">
+            <a href="https://github.com/guskirb">
+                <img src="/pics/githublogo.png" alt="github logo"></button>
+            </a>
+        </div>
 </body>
 
 </html>
