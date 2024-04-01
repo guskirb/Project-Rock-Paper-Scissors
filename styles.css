@@ -116,6 +116,7 @@ h3 {
 .footer img {
   height: 50px;
   width: 50px;
+  padding-right: 10px;
 }
 
 .footer {
@@ -123,4 +124,9 @@ h3 {
   justify-content: flex-start;
   margin-top: auto;
   margin-right: auto;
+}
+
+#round {
+  padding: 10px;
+  border-radius: 30px;
 }

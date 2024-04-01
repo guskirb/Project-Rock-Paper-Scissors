@@ -89,17 +89,24 @@ function playRound(playerSelection, computerSelection) {
 
 };
 
-
-
 function playGame(playerSelection) {
     console.log(playRound(playerSelection, getComputerChoice()));
     scoreboard.innerText = myscore;
     compScore.innerText = pcscore;
+    round.style.color = "black";
+    round.style.backgroundColor = null;
+    round.style.boxShadow = null;
     if (myscore >= 5) {
+        round.style.color = "white";
+        round.style.backgroundColor = "blue";
+        round.style.boxShadow = "#0000ff65 -3px 3px, #0000ff46 -5px 5px";
         round.innerText = "YOU WIN";
         myscore = 0;
         pcscore = 0;
     } if (pcscore >= 5) {
+        round.style.color = "white";
+        round.style.backgroundColor = "red";
+        round.style.boxShadow = "#ff000065 3px 3px, #ff000046 5px 5px";
         round.innerText = "YOU LOSE";
         myscore = 0;
         pcscore = 0;
