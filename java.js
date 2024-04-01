@@ -10,17 +10,17 @@ const pcZone = document.getElementById("pcZone")
 
 function addPaper(destination) {
     const img = document.getElementById(destination);
-    destination.src = "/pics/paper.png";
+    destination.src = "pics/paper.png";
 }
 
 function addRock(destination) {
     const img = document.getElementById(destination);
-    destination.src = "/pics/rock.png";
+    destination.src = "pics/rock.png";
 }
 
 function addScissors(destination) {
     const img = document.getElementById(destination);
-    destination.src = "/pics/scissors.png";
+    destination.src = "pics/scissors.png";
 }
 
 
